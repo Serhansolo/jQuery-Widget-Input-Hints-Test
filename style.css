@@ -4,3 +4,34 @@
 .eforms-field label {
     float: left;
 }
+
+.hint {
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    -o-transition: height .5s;
+    -webkit-transition: height .5s;
+    transition: height .5s;
+    overflow: hidden;
+    height: 20px;
+}
+
+.hint.close {
+    height: 0;
+}
+
+button {
+    -moz-transition: opacity .1s;
+    -ms-transition: opacity .1s;
+    -o-transition: opacity .1s;
+    -webkit-transition: opacity .1s;
+    transition: opacity .1s;
+    opacity: 1;
+}
+
+button.hide {
+    opacity: 0;
+}
+
+.hide-all {
+    margin-top: 30px;
+}
