@@ -5,22 +5,14 @@ $.widget("su.hint", {
     },
 
     _create: function() {
-        this._initPrivateVars();
-        this.element.attr('id', this._hintID());
+        this._privateVariables();
+        this.element.attr('id', hintID);
 
     },
 
-    _initPrivateVars: function() {
-        this.hintID = "hint-" + this.options.hintFor;
+    _privateVariables: function () {
+        hintID = "hint-" + this.options.hintFor;
     },
 
-    _hintID: function(value) {
-
-        if (value === undefined) {
-            return this.hintID;
-        }
-        this.options.hintFor = value;
-        this.hintID = "hint-" + value;
-    }
 
 });
