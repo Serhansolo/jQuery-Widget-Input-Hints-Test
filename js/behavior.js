@@ -9,5 +9,12 @@ $(document).ready(function() {
             $(this).hint('close');
         })
 
-    })
+    });
+
+    $('.open-all').on('click', function() {
+        $('.hint').each(function() {
+            $(this).hint('open');
+        })
+
+    });
 });

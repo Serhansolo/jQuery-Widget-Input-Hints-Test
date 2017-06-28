@@ -1,12 +1,13 @@
 $.widget("su.hint", {
     options: {
         hintFor: "common",
-        opened: false
+        opened: true
     },
 
     // Initialize our widget functionality
     _create: function() {
         this.element.attr('id', "hint-" + this.options.hintFor);
+        if (this.element.data('visibility') !== undefined) this.options.opened = this.element.data('visibility');
 
         this._addOpenButton();
         this._addCloseButton();
@@ -30,7 +31,6 @@ $.widget("su.hint", {
         this.element.removeClass('close');
         var inputField = $('#' + this.options.hintFor);
         inputField.next().addClass('hide');
-
     },
 
     _addOpenButton: function() {
